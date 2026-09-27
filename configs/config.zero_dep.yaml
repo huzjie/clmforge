@@ -1,0 +1,9 @@
+model:
+  embed_dim: 64
+  head_type: bilinear
+router:
+  mode: margin
+  margin_threshold: 0.20
+  slow_backend: mock
+cache:
+  enabled: true

@@ -1,0 +1,29 @@
+# clmforge configuration (YAML subset; JSON also supported)
+model:
+  embed_dim: 64
+  head_type: bilinear
+  normalize: true
+  backbone: frozen
+  max_actions: 512
+
+router:
+  mode: margin
+  margin_threshold: 0.20
+  slow_backend: mock
+
+cache:
+  enabled: true
+  max_entries: 65536
+  persist: false
+  path: .clmforge_cache.json
+
+train:
+  epochs: 10
+  batch_size: 32
+  lr: 0.05
+  negatives_per_positive: 8
+  loss: infonce
+  temperature: 0.07
+
+backend: mock
+top_k: 1

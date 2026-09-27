@@ -1,0 +1,7 @@
+model:
+  embed_dim: 128
+  head_type: mlp
+router:
+  mode: always_fast
+cache:
+  max_entries: 131072

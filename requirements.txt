@@ -1,0 +1,9 @@
+# clmforge core is zero-dependency (stdlib only).
+# Optional backends:
+#   openai/vllm: none (stdlib urllib)
+#   transformers: torch, transformers
+#   numpy/torch: numpy>=1.24, torch>=2.0
+# Uncomment to enable:
+# numpy>=1.24
+# torch>=2.0
+# transformers>=4.40

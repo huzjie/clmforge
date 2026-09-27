@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  clmforge:
+    build: .
+    ports:
+      - "8765:8765"
+    environment:
+      - CLM_TOKEN=secret
+    volumes:
+      - ./config.yaml:/app/config.yaml

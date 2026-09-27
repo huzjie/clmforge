@@ -1,0 +1,8 @@
+backend: openai
+backend_kwargs:
+  base_url: https://api.openai.com/v1
+  model: gpt-4o-mini
+router:
+  slow_backend: openai
+  mode: margin
+  margin_threshold: 0.3

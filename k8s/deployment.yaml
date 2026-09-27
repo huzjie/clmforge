@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clmforge
+  labels:
+    app: clmforge
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: clmforge
+  template:
+    metadata:
+      labels:
+        app: clmforge
+    spec:
+      containers:
+        - name: clmforge
+          image: clmforge:latest
+          ports:
+            - containerPort: 8765
+          env:
+            - name: CLM_TOKEN
+              value: "secret"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8765
+            initialDelaySeconds: 3
+            periodSeconds: 10

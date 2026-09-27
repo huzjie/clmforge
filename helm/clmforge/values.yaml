@@ -1,0 +1,15 @@
+replicaCount: 2
+
+image:
+  repository: clmforge
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8765
+
+env:
+  CLM_TOKEN: "secret"
+
+resources: {}
